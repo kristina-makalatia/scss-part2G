@@ -1,0 +1,22 @@
+@mixin d-flex($display,$justify,$align){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin border-style($size,$type,$color) {
+    border: $size $type $color;
+}
+
+@mixin hover-effect($property, $duration,$type, $delay) {
+    // transition-property: $property;
+    // transition-duration: $duration;
+    // transition-timing-function: $type;
+    // transition-delay: $delay;
+    transition: $property $duration $type $delay;
+}
+
+@mixin animation-style($animationName, $animationDuration, $count) {
+    animation: $animationName $animationDuration $count;
+}
+

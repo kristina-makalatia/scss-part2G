@@ -1,0 +1,54 @@
+.section-bg {
+    background-color: $color02;
+    padding-top: $size01;
+    .container {
+        @extend %size;
+        @include d-flex(flex,center,center);
+        @media screen and (max-width:1024px) {
+            @include d-flex(flex, space-between, center);
+        }
+        .left-block {
+            width: $size02;
+            height: $size02;
+            background-color: $color01;
+            @media screen and (max-width: 768px) {
+                background: yellow;
+            }
+            .left-p {
+                font-family: $font01;
+            }
+        }
+        .right-block {
+            width: $size02;
+            height: $size02;
+            background-color: $color03;
+            .right-p {
+                font-family: $font02;
+            }
+        }
+        
+    }
+
+}
+.section-second {
+    background-color: yellow;
+    .wraper {
+        @include d-flex(flex,space-around,center);
+        .left-block {
+            width: $size02;
+            height: $size02;
+            background-color: $color01;
+            @include border-style(2px,solid,black);
+            @include animation-style(myanimation,5s,infinite);
+        }
+        .right-block {
+            width: $size02;
+            height: $size02;
+            background-color: $color03;
+            @include hover-effect(all,0.5s,ease,0.5s);
+            &:hover {
+                background:aqua;
+            }
+        }
+    }
+}
